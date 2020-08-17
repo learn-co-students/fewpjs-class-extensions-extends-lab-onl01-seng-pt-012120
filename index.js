@@ -15,22 +15,14 @@ class Polygon {
 class Triangle extends Polygon {
     get isValid() {
         let sortedSides = this.sides.sort();
-        if ( sortedSides[2] < (sortedSides[0] + sortedSides[1]) ) {
-            return true
-        } else {
-            return false
-        }
+        return ( sortedSides[2] < (sortedSides[0] + sortedSides[1]) )
     }
 }
 
 class Square extends Polygon {
     get isValid() {
         let uniqSides = new Set(this.sides)
-        if (uniqSides.size === 1) {
-            return true
-        } else {
-            return false
-        }
+        return (uniqSides.size === 1)
     }
 
     get area() {
