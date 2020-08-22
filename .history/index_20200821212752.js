@@ -22,14 +22,5 @@ class Triangle extends Polygon {
     };
 }
 class Square extends Polygon {
-    get area(){
-        return this.sides[0]*this.sides[1];
-    };
-
-    get isValid(){
-        if(this.sides.length!==4)return;
-        return (this.sides[0] === this.sides[1] && this.sides[2] === this.sides[3] && this.sides[1] === this.sides[2]);
-    }
-
-
+    
 }
